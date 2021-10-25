@@ -1,0 +1,11 @@
+<!--Contact form-->
+<div style = "margin:8opx">
+<h1>Contact</h1>
+<h4> please send us a message </h4>
+
+<form method = "post">
+{% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">submit</button>
+    </form>
+    </div>
