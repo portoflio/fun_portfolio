@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"/>
         <!-- MDB   (buttons looks better)  @Duygu --> 
         <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>        
         <title></title>
     </head>
     <body>
@@ -27,16 +27,16 @@
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="navbar-brand"  href="{% url 'index' %}">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">HTML</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">CSS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">JavaScript</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Python</a></li>
-                        <li class="nav-item">
+                        <li class="nav-item"><a class="nav-link" href="">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'experience' %}">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+                        <!--<li class="nav-item">
                             <a class="nav-link btn btn-outline-primary" type="button" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>                  
                         </li>
                         <li class="nav-item" width="20px">
                             <a class="nav-link btn btn-outline-success" type="button" href="#" data-toggle="modal" data-target="#myModal">Register</a>
-                        </li>
+                        </li>> -->
                     </ul>
                 </div>    
             </div>
@@ -51,17 +51,17 @@
         <footer class="text-center text-lg-start border border-white mt-xl-5 pt-4 bg-dark shadow-sm">
             <section class="mb-4 bg-dark p-4">
                 <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
                 <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com/home" target="_blank" role="button"><i class="fab fa-twitter"></i></a>
                 <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com" target="_blank" role="button"><i class="fab fa-google"></i></a>
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" target="_blank" role="button"><i class="fab fa-instagram"></i></a>
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" target="_blank" role="button"><i class="fab fa-linkedin-in"></i></a>
                 <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.github.com/" target="_blank" role="button"><i class="fab fa-github"></i></a>
             </section>
             <div class="container p-4">
                 <div class="row" >

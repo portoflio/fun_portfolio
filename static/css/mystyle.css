@@ -95,3 +95,12 @@ footer{
     border-width: 1px;
     border-style: solid;
 }
+
+.left ul{
+    padding: 0;
+}
+
+.skill{
+    float: right;
+    background-color: #319083;
+}
