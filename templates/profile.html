@@ -2,8 +2,45 @@
 {% block body_block %}
 
 <div class="container">
-    <h1>{{ title }}</h1>
-    
+    <h1 class="display-4">Hello, My name is {{ title }} !</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Project 1</h5>
+            <small>155.251 likes</small>
+          </div>
+          <p class="mb-1">
+            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
+            blandit.
+          </p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Project 2</h5>
+            <small class="text-muted">285.123 likes</small>
+          </div>
+          <p class="mb-1">
+            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
+            blandit.
+          </p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Project 3</h5>
+            <small class="text-muted">87.265 likes</small>
+          </div>
+          <p class="mb-1">
+            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
+            blandit.
+          </p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+    </div>
 </div>
 {% endblock %}
 
