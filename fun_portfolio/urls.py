@@ -25,5 +25,3 @@ urlpatterns = [
     url(r'^experience_app/', include('experience_app.urls')),        
 ]
 
-"""I (Pierre) put this line bellow in my app's url"""
-#url(r'^experience', views.experience, name ='experience'),
