@@ -8,6 +8,9 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'index.html')
 
+def form1(request):
+     return render(request, 'contact.html')
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -30,7 +33,7 @@ def contact(request):
                 return HttpResponse('invalid header found.')
             return redirect("main:homepage")
         form = ContactForm()
-        return render(request, "main/contact.html",{'form':form})
+        return render(request, "Home/contact.html",{'form':form})
 
     
     
