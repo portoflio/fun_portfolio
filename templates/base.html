@@ -37,6 +37,14 @@
         </nav>
 
         <div class="container">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li {% if message.tags %} class = '{{ message.tags }}' {% endif %}>{{ message}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            
             {% block body_block %}
 
             {% endblock %}
@@ -62,14 +70,13 @@
                     <div class="col-sm-6">
                         <h5 class="text-uppercase mb-4">Sign up to our newsletter</h5>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="form-outline form-white mb-4">
-                            <input type="email" id="form5Example2" class="form-control" />
-                            <label class="form-label" for="form5Example2">Email address</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <button type="submit" class="btn btn-outline-light">Subscribe</button>
+                    <div class="col-sm-6">
+                        <form action="{% url 'subscribe' %}" method="post">
+                            {% csrf_token %}
+                            <input type="email" name="email" class="form-control" placeholder="Your Email ID Please" required>
+                            <br>
+                            <input type="submit" value="Subscribe" class="btn btn-primary btn-sm">
+                        </form>
                     </div>
                 </div>
             </div>
