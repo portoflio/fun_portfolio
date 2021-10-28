@@ -14,7 +14,7 @@ def form1(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
 #if the user requests to send a form, this checks if the form is valid
-        print("Test page1")
+     
         if form.is_valid():
             print("Validation success")
             
