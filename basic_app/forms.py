@@ -5,3 +5,5 @@ class SubscribeForm(forms.ModelForm):
     class Meta:
         model = Subscribers
         fields = '__all__'
+
+
