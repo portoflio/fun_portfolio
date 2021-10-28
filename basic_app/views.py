@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib import messages
+from basic_app.forms import SubscribeForm
 
 # Create your views here.
 def index(request):
@@ -19,3 +21,25 @@ def profile(request):
     else:
         title = str_req
     return render(request, 'profile.html', {'title':title})
+
+
+def subscribe(request):
+    
+    form = SubscribeForm()
+    print("BANAN!!!!!asdasdasd")
+    if request.method == 'POST':
+        form = SubscribeForm(request.POST)
+
+        print(request.POST)
+        print(form)
+        print("TOMATO")    
+        if form.is_valid():
+            print("Email:" + form.cleaned_data['email'])
+            form.save(commit=True)
+            print("GURKA")
+            messages.success(request,"Subscription successfully completed!")
+        else:
+             print('COFFE')
+             messages.success(request,"Invalid email adress!")
+    
+        return render(request, 'index.html')
