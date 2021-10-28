@@ -94,3 +94,12 @@ footer{
     border-width: 1px;
     border-style: solid;
 }
+
+.success{
+    list-style: none;
+    background-color: #319083;
+    color: white;
+    box-shadow: 12px 12px 12px #e61c66;
+    text-align: center;
+
+}
