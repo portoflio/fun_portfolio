@@ -7,3 +7,13 @@ class SubscribeForm(forms.ModelForm):
         fields = '__all__'
 
 
+from django.forms import fields
+from .models import Users
+
+
+class ContactForm(forms.Form):
+    class meta:
+        model = Users
+        fields ='_all_'
+    
+    

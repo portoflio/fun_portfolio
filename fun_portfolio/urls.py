@@ -25,3 +25,6 @@ urlpatterns = [
     url(r'^experience_app/', include('experience_app.urls')),       
     url(r'^subscribe/$', views.subscribe, name='subscribe'),
 ]
+    
+    
+
