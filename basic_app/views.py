@@ -34,23 +34,16 @@ def profile(request):
 def subscribe(request):
     
     form = SubscribeForm()
-    print("BANAN!!!!!asdasdasd")
     if request.method == 'POST':
-        form = SubscribeForm(request.POST)
-
-        print(request.POST)
-        print(form)
-        print("TOMATO")    
+        form = SubscribeForm(request.POST) 
         if form.is_valid():
             print("Email:" + form.cleaned_data['email'])
-            form.save(commit=True)
-            print("GURKA")
+            form.save(commit=True) 
             messages.success(request,"Subscription successfully completed!")
         else:
-             print('COFFE')
-             messages.success(request,"Invalid email adress!")
-    
+             messages.success(request,"Invalid email adress!") #success just for css
         return render(request, 'index.html')
+        
 def form1(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
