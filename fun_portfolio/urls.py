@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from basic_app import views
+from contact import views as contact_views
+from django.urls import path
 
 
 urlpatterns = [
@@ -24,7 +26,6 @@ urlpatterns = [
     url(r'^basic_app/', include('basic_app.urls')), 
     url(r'^experience_app/', include('experience_app.urls')),       
     url(r'^subscribe/$', views.subscribe, name='subscribe'),
+    path('contact/', contact_views.contact_view, name='contact'),
 ]
-    
-    
 

@@ -17,7 +17,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR,"static")
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -41,9 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'basic_app',
     'experience_app',
-    'crispy_forms',
+    'contact',
 ]
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,9 +70,17 @@ TEMPLATES = [
         },
     },
 ]
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+TEMPLATE_DIR= (
+    os.path.join(BASE_DIR, "templates"),
+    os.path.join(BASE_DIR, "contact/templates"),
+    os.path.join("templates")
+        )
 
 WSGI_APPLICATION = 'fun_portfolio.wsgi.application'
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -127,6 +133,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
-
-Email_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
