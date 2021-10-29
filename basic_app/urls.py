@@ -17,5 +17,6 @@ urlpatterns = [
     # url(r'^signup/$', views.users, name='signup'),
     url(r'^contact/', views.form1, name="contact"),
     url(r'^admin/',admin.site.urls),
+    url(r'^services/',views.services, name="services"),
     
 ]

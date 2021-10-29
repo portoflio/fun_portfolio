@@ -30,6 +30,8 @@ def profile(request):
         title = str_req
     return render(request, 'profile.html', {'title':title})
 
+def services(request):
+    return render(request, 'services.html')
 
 def subscribe(request):
     
